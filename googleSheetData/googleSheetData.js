@@ -7,7 +7,7 @@ const googleSheetData = async (range, keyFile) => {
   });
 
   const client = await auth.getClient();
-  const spreadsheetId = "1Mjz9tF5Sz2Q3TRvdzloSlDVJNqNgkjSCKwla6QF_7Ps";
+  const spreadsheetId = process.env.SPREED_SHEET_ID;
 
   const googleSheets = google.sheets({ version: "v4", auth: client });
 
